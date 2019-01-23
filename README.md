@@ -13,7 +13,7 @@
 サンプル
 
 ```
-curl http://127.0.0.1:5000/doc2vec -X POST -H "Content-Type: application/json" --data '{"documents": ["私はペンを持っています", "私はサッカーが好きです", "彼はブロックチェーンに詳しです", "私はゲームが好きです"]}'
+curl  https://doc2vec-api.herokuapp.com/doc2vec -X POST -H "Content-Type: application/json" --data '{"documents": ["私はペンを持っています", "私はサッカーが好きです", "彼はブロックチェーンに詳しです", "私はゲームが好きです"]}'
 ```
 
 サンプル返り値
@@ -55,4 +55,12 @@ curl http://127.0.0.1:5000/doc2vec -X POST -H "Content-Type: application/json" -
     }
   }
 }
+```
+
+# ローカル環境
+```
+# pipenvでパッケージインストール&仮想環境構築
+$ pipenv install
+# flaskの起動
+$ pipenv run python3 app.py
 ```
