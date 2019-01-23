@@ -28,7 +28,7 @@ def doc2vec():
     train_docs = [TaggedDocument(words=words, tags=[tag]) for words, tag in zip(documents, tags)]
     model = Doc2Vec(documents=train_docs, min_count=1, dm=0)
 
-    result = {tag: model.docvecs.most_similar(tag) for tag in tags}
+    result = {tag: {"document": document, "distances": model.docvecs.most_similar(tag)} for document, tag in zip(documents, tags)}
 
     # 結果を JSON にして返す
     return jsonify(
