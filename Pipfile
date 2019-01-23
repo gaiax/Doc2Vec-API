@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 flask = "*"
 gunicorn = "*"
+gensim = "*"
+janome = "*"
 
 [dev-packages]
 
